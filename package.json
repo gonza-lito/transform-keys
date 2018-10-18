@@ -8,7 +8,10 @@
     "build": "rm -rf ./dist && tslint -c ./tslint.json ./src/**/*  --format stylish && tsc --project tsconfig.json && cp package.json ./dist/package.json && cp package-lock.json ./dist/package-lock.json && cp readme.md ./dist/readme.md && echo build done! || echo build failed"
   },
   "author": "gonza-lito <gonzalo.romano@gmail.com>",
-  "repository": "git+ssh://git@/github.com/gonza-lito/transform-keys.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gonza-lito/transform-keys"
+  },
   "contributors": [
     {
       "name": "Gonzalo Romano",

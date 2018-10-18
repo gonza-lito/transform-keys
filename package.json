@@ -7,11 +7,25 @@
     "test": "jest",
     "build": "rm -rf ./dist && tslint -c ./tslint.json ./src/**/*  --format stylish && tsc --project tsconfig.json && cp package.json ./dist/package.json && cp package-lock.json ./dist/package-lock.json && echo build done! || echo  build failed"
   },
-  "author": "",
+  "author": "gonza-lito <gonzalo.romano@gmail.com>",
+  "repository": "git+ssh://git@/github.com/gonza-lito/transform-keys.git",
+  "contributors": [
+    {
+      "name": "Gonzalo Romano",
+      "email": "gonzalo.romano@whyline.com",
+      "url": "https://github.com/gonza-lito"
+    }],
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.11"
   },
+  "keywords": [
+    "json",
+    "typescript",
+    "javascript",
+    "library",
+    "mapping"
+  ],
   "devDependencies": {
     "@types/jest": "^23.3.5",
     "@types/lodash": "^4.14.117",

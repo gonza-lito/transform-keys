@@ -1,11 +1,11 @@
 # transform-keys
-Simple nodejs module for transforming plain object keys written in typescript 
+Simple nodejs module for transforming plain object keys written in typescript
 
 # Install
 
-npm install transform-keys
+npm install transform-keys-ts
 
-# Usage 
+# Usage
 
 
 ```
@@ -13,7 +13,7 @@ import { capitalize, map, slice } from 'lodash';
 
 import {
     transformKeys
-} from '../src/transformKeys';
+} from 'transform-keys-ts';
 // convert snake case to camel case
 transformKeys((key) => {
             const parts = key.split('_');

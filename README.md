@@ -1,6 +1,10 @@
 # transform-keys
 Simple nodejs module for transforming plain object keys written in typescript 
 
+# Install
+
+npm install transform-keys
+
 # Usage 
 
 
@@ -21,6 +25,3 @@ transformKeys((key) => {
 browse test for shorthand methods
 
 
-# install
-
-npm install transform-keys

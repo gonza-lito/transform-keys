@@ -24,4 +24,11 @@ transformKeys((key) => {
 
 browse test for shorthand methods
 
+# Build & Test
+
+```npm install```
+
+```npm run build``` 
+
+```npm run test```
 

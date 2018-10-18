@@ -19,3 +19,8 @@ transformKeys((key) => {
 ```
 
 browse test for shorthand methods
+
+
+# install
+
+npm install transform-keys

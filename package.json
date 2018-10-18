@@ -1,5 +1,5 @@
 {
-  "name": "transform-keys",
+  "name": "transform-keys-ts",
   "version": "1.0.0",
   "description": "Recursively transform the keys of an object",
   "main": "index.js",

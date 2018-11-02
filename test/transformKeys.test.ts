@@ -64,9 +64,9 @@ describe('transform keys ', () => {
                 { ADifferentKey: 1 },
                 { AnotherKey: 'test' }
             ],
-                ANestedKey: {
+            ANestedKey: {
                 NestedProperty: 3,
-                    MoreNestedProps: 2,
+                MoreNestedProps: 2,
             }
         };
 
@@ -97,12 +97,30 @@ describe('transform keys ', () => {
 
     it('should work with shorthandMethods ', () => {
 
-
         const camelCase = transformFromSnakeCaseToCamelCase(testSubject);
         const snakeCase = transformFromCamelCaseToSnakeCase(camelCase);
 
         expect(testSubject).toMatchObject(snakeCase);
 
+    });
+
+    it('should not parse null as object', () => {
+        const testSubjectWithNull = {
+            a_key: [
+                { a_different_key: 1 },
+                { another_key: 'test' }
+            ],
+            a_nested_key: {
+                nested_property: 3,
+                more_nested_props: 2,
+                a_null_prop: null,
+            }
+        };
+        const camelCase = transformFromSnakeCaseToCamelCase(testSubjectWithNull);
+        const snakeCase = transformFromCamelCaseToSnakeCase(camelCase);
+        // tslint:disable-next-line:no-console
+
+        expect(testSubjectWithNull).toEqual(snakeCase);
     });
 
 });

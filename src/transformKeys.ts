@@ -1,4 +1,6 @@
-import { capitalize, curry, isArray, join, keys, lowerCase, map, reduce, slice } from 'lodash';
+import {
+    capitalize, curry, isArray, isObjectLike, join, keys, lowerCase, map, reduce, slice
+} from 'lodash';
 
 export type splitFunc = (key: string) => string[];
 export type transformFunc = (split: splitFunc, transformation: transformationFunc, key) => string;
@@ -49,7 +51,7 @@ export function transformKeys<TSource, TDestination>(transformation: (sourceKey:
 
     const curriedSelf = curry(transformKeys);
     if (isArray(object)) { return map(object, curriedSelf(transformation)) as TDestination[]; }
-    if (typeof object !== 'object') { return object as unknown as TDestination; }
+    if (!isObjectLike(object)) { return object as unknown as TDestination; }
     const objectKeys = keys(object);
     return reduce(objectKeys, (newObj, key) => {
         const newKey = transformation(key);
